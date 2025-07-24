@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="practice3.css">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: blueviolet;
+
+        }
+        .bear{
+            font-size: 30px;
+            border: 5px solid;
+            border-radius: 10px;
+            
+           
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div style="color: aqua;text-align: center; "></style><h1> Student Registration Form</h1></div>
+    <div class="bear">
+       <form action=".\submit"method=post>
+         <label for="UserName"> UserName</label>
+        <input type="text"id="UserName"name="UserName"placeholder="UserName"><br><br>
+        <label for="Email">Email:</label>
+        <input type="Email"id="Email"name="Email"placeholder="Email"><br><br>
+        <label for="password">password:</label>
+        <input type="password"id="password"name="password"placeholder="password"><br><br>
+        <label>Gender: </label>
+        <input type="radio" name="Gender" value="Male">male
+        <input type="radio" name="Gender" value="Female">female <br><br>
+
+        <label>Hobby: </label>
+        <input type="radio" name="Hobby" value="gardeing">gardeing
+        <input type="radio" name="Gender" value="fishing">fishing<br><br>
+
+
+        <label for="dob">Date of birth: </label>
+        <input type="date" id="dob" name="dob" placeholder="dob" required><br><br>
+        
+         <label>Hobby: </label><br>
+
+        <input type="checkbox" id="Hobby1" name="Hobby1" value="gardeing">
+        <label for="Hobby1"> gardeing</label><br><br>
+         
+        <input type="checkbox" id="Hobby2" name="Hobby2" value="fishing">
+        <label for="Hobby2"> fishing</label><br><br>
+
+        <input type="submit"value="submit">
+        <input type="reset"value="reset">
+       </form>
+
+
+    </div>
+</body>
+</html>
