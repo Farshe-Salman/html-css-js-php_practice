@@ -1,0 +1,185 @@
+
+*{
+    margin: 0;
+}
+#div1{
+    position: sticky;
+    top: 0;
+    background-color: rgb(11, 11, 12);
+}
+#first_div{
+    background-color: rgb(11, 11, 12);
+    height: 440px;
+}
+
+.section1{
+    display: flex;
+}
+.main_p{
+    color: white;
+    font-size: 22px;
+    font-weight: bolder;
+    padding-left: 250px;
+    padding-top: 60px;
+    display: flex;
+}
+
+.logo_photo{
+    padding-top: 55px;
+    padding-left: 10px;
+}
+
+.main_p2{
+    color: white;
+    font-size: 22px;
+    font-weight: bolder;
+    padding-top: 60px;
+    padding-left: 10px;
+}
+
+.section11{
+   padding-top: 60px;
+    padding-left: 430px;
+    display: flex;
+}
+
+.upper_btn{
+    color: #FFA000;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 17px;
+    padding-left: 20px;
+}
+
+
+#p1{
+    text-align: center;
+    color: azure;
+    padding-top: 70px;
+    font-size: 3.2rem;
+    font-weight: bold;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif;
+
+}
+
+#p2{
+    text-align: center;
+    color: rgb(196, 191, 191);
+    margin-top: 25px;
+    font-size: 1.25rem;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
+}
+
+#btn1{
+  position: relative;
+  background-color: #FFA000;
+  display: block;
+  margin: 20px auto;
+  padding: 12px 24px;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  font-size: large;
+}
+
+#a3{
+    display: block;
+    color: white;
+    text-align: center;   
+}
+
+#div2_1{
+    padding-top: 40px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+
+.div2_2{
+    width: 400px;
+    padding-left: 220px;
+    padding-top: 40px;
+}
+
+.section2_1{
+    text-align: center;
+}
+
+.div2_p1{
+    font-size: 20px;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.div2_p2{
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.div2_3{
+    width: 400px;
+    padding-left: 220px;
+    padding-top: 60px;
+}
+
+#div2{
+    height: 550px;
+}
+
+#div3{
+    height: 200px;
+    background-color: #e4e3e0;
+    border: 1px solid;
+}
+
+#div3_s1{
+    padding-left: 280px;
+    display: flex;
+}
+
+.bPhoto{
+    height: 27px;
+    margin-left: 70px;
+    margin-top: 30px;
+}
+
+#div4{
+    height: 80px;
+    background-color: #d6d6d4;
+}
+
+#div4_d1{
+    padding-left: 500px;
+    display: flex;
+}
+.div4_s1{
+    padding-top: 25px;
+    display: flex;
+    padding-left: 70px;
+}
+
+.cPhoto{
+    height: 30px;
+}
+
+.div4_p1{
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+#div5{
+    background-color: #111111;
+    height: 200px;
+}
+
+#div5_d1{
+    padding-left: 400px;
+    padding-top: 50px;
+    text-align: center;
+    width: 700px;
+    font-weight: bold;
+    color: #d6d6d4;
+}
