@@ -19,14 +19,14 @@
     color: white;
     font-size: 22px;
     font-weight: bolder;
-    padding-left: 250px;
+    padding-left: 18%;
     padding-top: 60px;
     display: flex;
 }
 
 .logo_photo{
     padding-top: 55px;
-    padding-left: 10px;
+    padding-left: 0.67%;
 }
 
 .main_p2{
@@ -34,12 +34,12 @@
     font-size: 22px;
     font-weight: bolder;
     padding-top: 60px;
-    padding-left: 10px;
+    padding-left: 0.67%;
 }
 
 .section11{
    padding-top: 60px;
-    padding-left: 430px;
+    padding-left: 28%;
     display: flex;
 }
 
@@ -51,6 +51,7 @@
     font-size: 17px;
     padding-left: 20px;
 }
+
 
 
 #p1{
@@ -100,7 +101,7 @@
 
 .div2_2{
     width: 400px;
-    padding-left: 220px;
+    padding-left: 15%;
     padding-top: 40px;
 }
 
@@ -121,7 +122,7 @@
 
 .div2_3{
     width: 400px;
-    padding-left: 220px;
+    padding-left: 15%;
     padding-top: 60px;
 }
 
@@ -136,7 +137,7 @@
 }
 
 #div3_s1{
-    padding-left: 280px;
+    padding-left: 19%;
     display: flex;
 }
 

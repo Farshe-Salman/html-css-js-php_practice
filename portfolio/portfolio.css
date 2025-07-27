@@ -1,0 +1,232 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+/* Intro Section */
+#intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh;
+}
+
+.intro-text h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.intro-text h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.intro-text .name {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.intro-text .profession {
+    color: #555;
+}
+
+.social-links {
+    margin-top: 2rem;
+}
+
+.social-icon {
+    margin: 0 10px;
+}
+
+.social-icon img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.2);
+}
+
+/* About Section */
+#about .about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+#about .about-text {
+    flex: 1;
+}
+
+#about .about-image {
+    flex: 1;
+    text-align: center;
+}
+
+#about .about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Skills Section */
+#skills .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#skills .skill-category {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 45%;
+    min-width: 300px;
+}
+
+#skills .skill-category h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+#skills .skill-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#skills .skill-icons img {
+    height: 50px;
+}
+
+/* Education & Experience Section */
+.education-item, .experience-item, .project-item {
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.education-item h3, .experience-item h3, .project-item h3 {
+    margin-top: 0;
+}
+
+/* Contact Section */
+#contact p {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #intro {
+        min-height: 60vh;
+    }
+
+    .intro-text h1, .intro-text .name {
+        font-size: 3rem;
+    }
+
+    .intro-text h3 {
+        font-size: 1.2rem;
+    }
+
+    #about .about-content {
+        flex-direction: column;
+    }
+
+    #skills .skill-category {
+        width: 100%;
+    }
+}
