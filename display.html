@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Display Properties</title>
+  <style>
+    /* General body style */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f8f9fa;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      color: #1d3557;
+    }
+
+    /* Block element */
+    .block-box {
+      display: block;
+      background-color: #a8dadc;
+      padding: 20px;
+      margin-bottom: 10px;
+    }
+
+    /* Inline element */
+    .inline-text {
+      display: inline;
+      background-color: #f1faee;
+      color: #e63946;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+
+    /* Inline-block element */
+    .inline-block-box {
+      display: inline-block;
+      width: 150px;
+      height: 100px;
+      background-color: #457b9d;
+      color: white;
+      text-align: center;
+      line-height: 100px;
+      margin: 5px;
+      border-radius: 8px;
+    }
+
+    /* Flex container */
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .flex-item {
+      background-color: #1d3557;
+      color: white;
+      padding: 20px;
+      flex: 1;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    /* Grid container */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .grid-item {
+      background-color: #2a9d8f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    /* Hidden element */
+    .hidden-box {
+      display: none;
+      background-color: red;
+      color: white;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    .fixed-box {
+  width: 600px;
+  background: #f76c6c;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.max-box {
+  max-width: 600px;
+  background: #6c5ce7;
+  color: white;
+  padding: 10px;
+}
+
+  </style>
+</head>
+<body>
+
+  <h1>CSS Display Property Examples</h1>
+
+  <!-- Block element -->
+  <h2>1. Block Element</h2>
+  <div class="block-box">
+    This is a block element (takes full width, starts on a new line).
+  </div>
+
+  <!-- Inline elements -->
+  <h2>2. Inline Element</h2>
+  <p>
+    This is an <span class="inline-text">inline</span> element inside a sentence.
+    Another <span class="inline-text">inline</span> element.
+  </p>
+
+  <!-- Inline-block example -->
+  <h2>3. Inline-Block Boxes</h2>
+  <div class="inline-block-box">Box 1</div>
+  <div class="inline-block-box">Box 2</div>
+  <div class="inline-block-box">Box 3</div>
+  <div class="inline-block-box">Box 3</div>
+  <div class="inline-block-box">Box 3</div>
+  <div class="inline-block-box">Box 3</div>
+  <div class="inline-block-box">Box 3</div>
+  <div class="inline-block-box">Box 3</div>
+  <div class="inline-block-box">Box 3</div>
+  <div class="inline-block-box">Box 3</div>
+  <div class="inline-block-box">Box 3</div>
+  <div class="inline-block-box">Box 3</div>
+
+  <!-- Flex container -->
+  <h2>4. Flexbox Layout</h2>
+  <div class="flex-container">
+    <div class="flex-item">Flex 1</div>
+    <div class="flex-item">Flex 2</div>
+    <div class="flex-item">Flex 3</div>
+    <div class="flex-item">Flex 3</div>
+    <div class="flex-item">Flex 3</div>
+  </div>
+
+  <!-- Grid container -->
+  <h2>5. Grid Layout</h2>
+  <div class="grid-container">
+    <div class="grid-item">Grid 1</div>
+    <div class="grid-item">Grid 2</div>
+    <div class="grid-item">Grid 3</div>
+    <div class="grid-item">Grid 4</div>
+    <div class="grid-item">Grid 5</div>
+    <div class="grid-item">Grid 6</div>
+    <div class="grid-item">Grid 6</div>
+  </div>
+
+  <!-- Hidden box -->
+  <div class="hidden-box">
+    You shouldn't see me! I’m hidden using display: none.
+  </div>
+
+  <div class="fixed-box">Fixed width</div>
+<div class="max-box">Max width</div>
+
+
+</body>
+</html>

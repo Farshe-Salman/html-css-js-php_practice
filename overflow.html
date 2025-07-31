@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS Overflow Example</title>
+  <style>
+    .container {
+      width: 300px;
+      height: 150px;
+      border: 2px solid #333;
+      margin: 20px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+
+    /* visible (default) */
+    .box-visible {
+      overflow: visible;
+      background-color: #ffe0e0;
+    }
+
+    /* hidden */
+    .box-hidden {
+      overflow: hidden;
+      background-color: #e0ffe0;
+    }
+
+    /* scroll */
+    .box-scroll {
+      overflow: scroll;
+      background-color: #e0e0ff;
+    }
+
+    /* auto */
+    .box-auto {
+      overflow: auto;
+      background-color: #fff0e0;
+    }
+
+    .content {
+      width: 350px;
+      height: 200px;
+      background-color: #ccc;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>overflow: visible (default)</h2>
+  <div class="container box-visible">
+    <div class="content">
+      This content is bigger than its container.<br/>
+      It will overflow outside the container and be visible.
+    </div>
+  </div>
+
+  <h2>overflow: hidden</h2>
+  <div class="container box-hidden">
+    <div class="content">
+      This content is bigger than its container.<br/>
+      Overflow part will be hidden (cut off).
+    </div>
+  </div>
+
+  <h2>overflow: scroll</h2>
+  <div class="container box-scroll">
+    <div class="content">
+      This content is bigger than its container.<br/>
+      Scrollbars always visible even if not needed.
+    </div>
+  </div>
+
+  <h2>overflow: auto</h2>
+  <div class="container box-auto">
+    <div class="content">
+      This content is bigger than its container.<br/>
+      Scrollbars only show if needed.
+    </div>
+  </div>
+
+</body>
+</html>

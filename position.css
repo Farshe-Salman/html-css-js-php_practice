@@ -1,0 +1,78 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  height: 2000px; /* Allows scrolling */
+  background-color: #f9f9f9;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+/* Common box styling */
+.box {
+  width: 200px;
+  height: 100px;
+  margin-bottom: 40px;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  line-height: 100px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 1. Static */
+.static {
+  background-color: #3498db;
+  position: static;
+}
+
+/* 2. Relative */
+.relative {
+  background-color: #9b59b6;
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+
+/* 3. Absolute */
+.parent {
+  position: relative;
+  height: 150px;
+  background-color: #f0f0f0;
+  margin-bottom: 40px;
+  border: 5px dashed #ccc;
+}
+
+.absolute {
+  background-color: #e67e22;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+/* 4. Fixed */
+.fixed {
+  background-color: #2ecc71;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 999;
+}
+
+/* 5. Sticky */
+.sticky {
+  background-color: #e74c3c;
+  position: sticky;
+  top: 20px; /* Stick to 20px from top */
+  z-index: 1;
+}
+
+/* Spacers to create scrollable area */
+.spacer {
+  height: 400px;
+}
