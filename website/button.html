@@ -1,0 +1,51 @@
+!-- button.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Interaction</title>
+    <link rel="stylesheet" href="button.css">
+</head>
+<body>
+    <h1>Multimedia and Elements Display</h1>
+
+    <button onclick="showElement('para')">Show Paragraph</button>
+    <button onclick="showElement('image')">Show Image</button>
+    <button onclick="showElement('video')">Show Video</button>
+    <button onclick="showElement('audio')">Show Audio</button>
+    <button onclick="showElement('table')">Show Table</button>
+
+    <div id="para" class="content-box">
+        <p>This is a sample paragraph shown after clicking the button.</p>
+    </div>
+
+    <div id="image" class="content-box">
+        <img height="300px" src="b4.svg" alt="Sample Image">
+    </div>
+
+    <div id="video" class="content-box">
+        <video width="320" height="240" controls>
+            <source src="sample-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div id="audio" class="content-box">
+        <audio controls>
+            <source src="sample-audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div id="table" class="content-box">
+        <table border="1">
+            <tr><th>Name</th><th>Age</th></tr>
+            <tr><td>Salman</td><td>23</td></tr>
+            <tr><td>Farshe</td><td>22</td></tr>
+        </table>
+    </div>
+
+    <script src="button.js"></script>
+</body>
+</html>
