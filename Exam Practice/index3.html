@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice-3</title>
+    <style>
+        /* Style for the message */
+        #message {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .red {
+            color: red;
+        }
+    </style>
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+            const ageInput = document.getElementById("age");
+            const messageDiv = document.getElementById("message");
+
+            ageInput.addEventListener("input", function() {
+                const age = parseInt(this.value);
+
+                if (isNaN(age)) {
+                    messageDiv.textContent = "Enter age(must be numbers!)"; // Clear message if not a number
+                    messageDiv.classList.add("red");
+                    return;
+                }
+
+                if (age < 40) {
+                    messageDiv.textContent = "To be a part of the community, you need to at least 40.";
+                    messageDiv.classList.add("red");
+                } else if (age >= 40 && age <= 50) {
+                    messageDiv.textContent = "You are the youngsters of this community.";
+                    messageDiv.classList.add("red");
+                } else if (age > 50) {
+                    messageDiv.textContent = "Top level members of the group.";
+                    messageDiv.classList.add("red");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+     <h2>Community Membership Check</h2>
+    <form>
+        <label for="age">Enter your Age:</label>
+        <input type="text" id="age" name="age" placeholder="Enter your age">
+        <div id="message"></div>
+    </form>
+</body>
+</html>

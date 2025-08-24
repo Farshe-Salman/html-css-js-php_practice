@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Output Tracing Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        input, select, button {
+            padding: 10px;
+            margin: 5px 0;
+            width: 100%;
+        }
+        #webOutput, #consoleOutput {
+            margin-top: 15px;
+            padding: 10px;
+            border: 1px solid #333;
+            background-color: #eee;
+            min-height: 30px;
+        }
+        h2 { text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Exam Result Checker</h2>
+
+    <!-- Form -->
+    <label for="studentName">Student Name:</label>
+    <input type="text" id="studentName" placeholder="Enter name">
+
+    <label for="subject">Select Subject:</label>
+    <select id="subject">
+        <option value="math">Math</option>
+        <option value="english">English</option>
+        <option value="science">Science</option>
+    </select>
+
+    <label for="marks">Enter Marks:</label>
+    <input type="number" id="marks" placeholder="0-100">
+
+    <button onclick="checkResult()">Check Result</button>
+
+    <!-- Web Output -->
+    <h3>Web Page Output:</h3>
+    <div id="webOutput"></div>
+
+    <!-- Console Output -->
+    <h3>Console Output:</h3>
+    <div id="consoleOutput">Open browser console for detailed logs</div>
+</div>
+
+<script>
+    // Array of students
+    let students = [
+        {name: "Alice", math: 85, english: 78, science: 92},
+        {name: "Bob", math: 65, english: 88, science: 70},
+        {name: "Charlie", math: 95, english: 82, science: 60}
+    ];
+
+    function checkResult() {
+        // Get input values
+        let name = document.getElementById("studentName").value;
+        let subject = document.getElementById("subject").value;
+        let marks = parseInt(document.getElementById("marks").value);
+
+        // Web output element
+        let webOut = document.getElementById("webOutput");
+
+        // Console output
+        console.clear();
+        console.log("Inputs Received -> Name:", name, "Subject:", subject, "Marks:", marks);
+
+        // Function example: find student object by name
+        function findStudent(studentName) {
+            for(let i=0; i<students.length; i++){
+                if(students[i].name.toLowerCase() === studentName.toLowerCase()) {
+                    console.log("Student Found:", students[i]);
+                    return students[i];
+                }
+            }
+            console.log("Student Not Found");
+            return null;
+        }
+
+        let studentObj = findStudent(name);
+
+        // If student not found, show message
+        if(studentObj === null) {
+            webOut.innerHTML = "Student not found!";
+            console.log("Output: Student not found!");
+            return;
+        }
+
+        // Switch case example: determine grade
+        let grade;
+        switch(true) {
+            case (marks >= 90):
+                grade = "A+";
+                break;
+            case (marks >= 80):
+                grade = "A";
+                break;
+            case (marks >= 70):
+                grade = "B";
+                break;
+            case (marks >= 60):
+                grade = "C";
+                break;
+            default:
+                grade = "F";
+        }
+
+        // Array & object example: store result
+        let result = {
+            student: studentObj.name,
+            subject: subject,
+            marks: marks,
+            grade: grade
+        };
+
+        // Web page output
+        webOut.innerHTML = `Student: ${result.student}<br>
+                            Subject: ${result.subject}<br>
+                            Marks: ${result.marks}<br>
+                            Grade: ${result.grade}`;
+
+        // Console output for tracing
+        console.log("Result Object:", result);
+        console.log("Web Output Updated!");
+    }
+</script>
+
+</body>
+</html>

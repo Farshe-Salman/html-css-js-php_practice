@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice-1</title>
+     <script>
+        // JavaScript function to validate form
+        function validateForm() {
+            // Get values of input fields
+            let firstName = document.forms["myForm"]["firstName"].value.trim();
+            let lastName = document.forms["myForm"]["lastName"].value.trim();
+
+            // Check if fields are empty
+            if (firstName === "" || lastName === "") {
+                alert("Both First Name and Last Name must be filled out.");
+                return false; // Prevent form submission
+            }
+
+            // Check minimum length
+            if (firstName.length < 2 || lastName.length < 2) {
+                alert("Each field must have at least 2 characters.");
+                return false; // Prevent form submission
+            }
+
+            // If everything is fine
+            return true; // Allow form submission
+        }
+    </script>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form name="myForm" onsubmit="return validateForm()">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName"><br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName"><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <title>Form Page</title>
+
+        <script>
+            function validateform(event){
+                
+                event.preventDefault();
+
+                let firstName=document.getElementById("fname").value.trim();
+                let lastName=document.getElementById("lname").value.trim();
+                let dob=document.getElementById("dob").value.trim();
+                let email=document.getElementById("email").value.trim();
+                let password1=document.getElementById("password").value.trim();
+                let password2=document.getElementById("conformPassword").value.trim();
+                let phoneNumber=document.getElementById("phone").value.trim();
+
+                let gender='';
+                if(document.getElementById("male").checked){
+                    gender="'male";
+                }
+                else{
+                    gender="female";
+                }
+                
+                if(firstName==='')
+            {
+                alert("PLease enter your first name");
+                return false;
+            }
+
+            if(password1==='' || password2==='')
+            {
+                alert("PLease enter your password and conform passowrd");
+                return false;
+            }
+
+            if(phoneNumber.length !== 11)
+            {
+                alert("please input a valid 11 digit phone number");
+                return false;
+            }
+
+            if(password1 !== password2)
+            {
+                alert("Both Passowrd are not same");
+                return false;
+            }
+
+            console.log("console er output: ", password1);
+            console.log(password2);
+
+            document.getElementById("data").innerHTML=`
+            <p>First Name: ${firstName}</p>
+            <p>Last Name: ${lastName}</p>
+            <p>DOB: ${dob}</p>
+            <p>Gender: ${gender}</p>
+            <p>Phone: ${phoneNumber}</p>
+            <p>Email: ${email}</p>
+            <p>Password: ${password1}</p>
+            <p>Conoform Password: ${password2}</p>
+            `;
+
+
+            return true;
+
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Student form</h1>
+
+        <form name="form" onsubmit="return validateform(event)">
+            <label for="fname">First Name: </label>
+            <input type="text" name="fname" id="fname"><br><br>
+
+            <label for="lname">Last Name: </label>
+            <input type="text" name="lname" id="lname"><br><br>
+
+            <label for="dob">DOB: </label>
+            <input type="text" name="dob" id="dob"><br><br>
+
+            <label for="gender">Gender: </label>
+            <input type="radio" name="male" id="male">Male 
+            <input type="radio" name="female" id="female">Female <br><br>
+
+            <label for="phone">Phone NUmber: </label>
+            <input type="text" name="phone" id="phone"><br><br>
+
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email"><br><br>
+
+            <label for="password">password: </label>
+            <input type="password" name="password" id="password"><br><br>
+
+            <label for="conformPassword">Conform Password</label>
+            <input type="password" name="conformPassword" id="conformPassword"><br><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">  
+        </form>
+
+        <div id="data">
+
+        </div>
+    </body>
+</html>

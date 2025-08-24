@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Array Methods Example</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .output { margin-top: 15px; padding: 10px; border: 1px solid #333; background-color: #eee; }
+        button { padding: 10px; margin-top: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<h2>JavaScript Array Methods: toString, join, pop, push</h2>
+
+<div id="webOutput" class="output">Web output will appear here</div>
+<div id="consoleOutput" class="output">Check browser console for detailed logs</div>
+
+<button onclick="arrayMethodsDemo()">Run Array Methods</button>
+
+<script>
+function arrayMethodsDemo() {
+    console.clear();
+    let output = document.getElementById("webOutput");
+
+    // 1. Create array
+    let fruits = ["Banana", "Orange", "Apple", "Mango"];
+    console.log("Initial Array:", fruits);
+
+    // 2. toString() - converts array to comma-separated string
+    let fruitsString = fruits.toString();
+    console.log("fruits.toString():", fruitsString);
+
+    // 3. join() - joins array elements with a custom separator
+    let fruitsJoined = fruits.join(" * ");
+    console.log("fruits.join(' * '):", fruitsJoined);
+
+    // 4. pop() - removes last element and returns it
+    let poppedFruit = fruits.pop();
+    console.log("After pop(), removed:", poppedFruit);
+    console.log("Array after pop():", fruits);
+
+    // 5. push() - adds new element at the end
+    let newLength = fruits.push("Kiwi");
+    console.log("After push('Kiwi'), new length:", newLength);
+    console.log("Array after push():", fruits);
+
+    // 6. Web Output
+    output.innerHTML = `
+        Initial Array: ["Banana", "Orange", "Apple", "Mango"]<br>
+        toString(): ${fruitsString}<br>
+        join(" * "): ${fruitsJoined}<br>
+        After pop(): Removed "${poppedFruit}", Array = [${fruits}]<br>
+        After push("Kiwi"): New length = ${newLength}, Array = [${fruits}]
+    `;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html> 
+<html lang="eng">
+    <head>
+        <title>parc2</title>
+        <style>
+            .maindiv{
+                width: 50%;
+                border: 2px solid;
+                height: 1000px;
+            }
+
+            h1{
+                text-align: center;
+            }
+
+            label{
+                font-size: 20px;
+            }
+
+            input{
+                width: 200px;
+                margin-left: 10px;
+            }
+
+
+        </style>
+
+        <script>
+            function validateForm(event){
+
+            event.preventDefault();
+
+            let firstName=document.getElementById("fname").value.trim();
+            let lastName=document.getElementById("lname").value.trim();
+            let dob=document.getElementById("dob").value.trim();
+            let phone=document.getElementById("phone").value.trim();
+            let email=document.getElementById("email").value.trim();
+            let password=document.getElementById("password").value;
+            let conformPassword=document.getElementById("conformPassword").value;
+
+            let gender='';
+            if(document.getElementById("male").checked){
+                gender="male";
+            }
+            if(document.getElementById("female").checked){
+                gender="female"
+            }
+
+            if(firstName==='' || lastName ==='' || firstName.length <5)
+            {
+                alert("Input both first and last name");
+                return false;
+            }
+
+            if(gender==="")
+            {
+                document.getElementById("error").innerText='Please select a option0';
+                return false;
+            }
+
+            console.log("First Name:", firstName);
+            console.log("Last Name:", lastName);
+
+            document.getElementById("result").innerHTML=`
+            <h1>Your Data</h1>
+            <p><b>First Name: </b> ${firstName}</p>`;
+
+            return true;
+            }
+
+        </script>
+    </head>
+    <body style="display: flex;">
+        <div class="maindiv" style="background-color: rgb(240, 241, 237);">
+            <h1>Studnet Form</h1>
+            
+            <form name="Form" onsubmit="return validateForm(event)">
+                <label for="fname">First Name:</label>
+                <input type="text" name="fname" id="fname"><br><br>
+                
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname"> <br><br>
+
+                <label for="dob">Date of Birth:</label>
+                <input style="width: 180px;" type="text" name="dob" id="dob" placeholder="DD/MM/YYYY"><br><br>
+
+                <label for="gender">Gender:</label>
+                <input style="width: 30px;" type="radio" name="male" id="male">Male
+                <input style="width: 30px;" type="radio" name="female" id="female">Female <br>
+                <p id="error"></p>
+                <br><br>
+            
+                <label for="phone">Phone:</label>
+                <input type="number" name="phone" id="phone" placeholder="01xxxxxxxxxx"><br><br>
+
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" placeholder="abc@gmail.com"><br><br>
+
+                <label for="password">Password: </label>
+                <input type="password" name="password" id="password"><br><br>
+
+                <label for="conformPassword">Conform password:</label>
+                <input style="width: 150px;" type="password" name="conformPassword" id="conformPassword"><br><br>
+
+                <input style="width: 150px;" type="submit" value="Mim">
+            </form>
+
+
+        </div>
+        <div class="maindiv" id="result">
+            <h1>Your Data</h1>
+        </div>
+    </body>
+</html>

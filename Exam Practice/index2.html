@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice-2</title>
+     <script>
+        window.addEventListener("DOMContentLoaded", function() {
+            // Get the input field
+            const usernameInput = document.getElementById("username");
+
+            // Add input event listener
+            usernameInput.addEventListener("input", function() {
+                // Convert value to uppercase
+                this.value = this.value.toUpperCase();
+            });
+        });
+    </script>
+</head>
+<body>
+     <h2>Enter Username</h2>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Type here"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

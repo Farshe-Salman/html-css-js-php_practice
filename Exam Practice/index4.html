@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Absolute Position Example</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: 
+            linear-gradient(to right, lightgray 1px, transparent 1px),
+            linear-gradient(to bottom, lightgray 1px, transparent 1px);
+        background-size: 10px 10px; /* Grid lines every 10px */
+        padding: 20px;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    /* Container box */
+    .container {
+        width: 300px;
+        height: 200px;
+        border: 2px solid black;
+        position: relative; /* Reference point for absolute positioning */
+        margin-bottom: 20px;
+    }
+
+    /* Inner "Bottom Right" box */
+    .bottom-right {
+        width: 100px;
+        height: 50px;
+        border: 2px solid black;
+        position: absolute;
+        bottom: 10px; /* 10px from bottom */
+        right: 10px;  /* 10px from right */
+        text-align: center;
+        line-height: 50px; /* Vertically center text */
+        font-weight: bold;
+        background-color: white;
+    }
+
+    /* Optional label for container center */
+    .container-label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<h1>Absolute Position Example</h1>
+
+<div class="container">
+    <div class="container-label">Container Area</div>
+    <div class="bottom-right">Bottom Right</div>
+</div>
+
+</body>
+</html>
